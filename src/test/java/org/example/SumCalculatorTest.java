@@ -10,22 +10,22 @@ class SumCalculatorTest {
     private SumCalculator sumCalculator;
 
     @BeforeEach
-    void testNewClass() {
+    void setUp() {
         sumCalculator = new SumCalculator();
     }
 
     @Test
-    void testSumOne() {
+    void givenOneWhenSumThenReturnOne() {
         assertEquals(1, sumCalculator.sum(1));
     }
 
     @Test
-    void testSumThree() {
+    void givenThreeWhenSumThenReturnSix() {
         assertEquals(6, sumCalculator.sum(3));
     }
 
     @Test
-    void testSumZero() {
+    void givenZeroWhenSumThenReturnIllegalArgumentException() {
         assertThrows(IllegalArgumentException.class, () -> sumCalculator.sum(0));
     }
 }
